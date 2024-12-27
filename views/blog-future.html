@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Future - Mariama's Portfolio</title>
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,300&family=Alegreya+Sans:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/29ffacc206.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav id="mobile-nav" class="mobile-vis">
+        <div class="mobile-logo">
+            <a href="/"><img src="assets/img/Plugin icon - 1.png"  aria-label="logo for website,, a pink rimmed circle with pale yellow background, dark plum M and exclaimation point with two stars"></a>
+        </div>
+        <div id="menu-bars"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg></div>
+    </nav>
+    <nav id="desktop-nav" class="desktop-vis">
+        <div class="logo">
+            <a href="/"><img src="assets/img/Plugin icon - 1.png"  aria-label="logo for website,, a pink rimmed circle with pale yellow background, dark plum M and exclaimation point with two stars"></a>
+        </div>
+        <div><a href="/">Home</a></div>
+        <div><a href="/projects">Projects</a></div>
+        <div class="current-page"><a href="/blog">Blog</a></div>
+        <div><a href="/resume">Resume</a></div>
+        <div><a href="/contact">Contact</a></div>
+    </nav>
+    <div class="back-button"><a href="/blog"><i class="fa-solid fa-arrow-left-long"></i></a></div>
+    <section id="md-future-blog-post">
+
+    </section>
+    <input id="EJSData" value="<%= data %>" style="visibility: hidden;"/>
+    <!-- have more clear names for ids-->
+    <script id="EJSDataLoader">
+        (()=>{
+            let ejsDataElm = document.getElementById("EJSData");
+            let section = document.querySelector("#md-future-blog-post");
+            section.innerHTML = `${ejsDataElm.value}`;
+            //document.body.appendChild(section);
+            // document.body.removeChild(document.getElementById("EJSData"));
+            // document.body.removeChild(document.getElementById("EJSDataLoader"));
+        })();
+    </script>
+     <footer id="copyright" aria-label="copyright information">&copy 2024 Mariama Bah (Mariamazing)</footer>
+</body>
+</html>
